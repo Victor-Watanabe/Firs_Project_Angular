@@ -1,7 +1,10 @@
 <app-default-login-layout
     title="Login Into Your Account"
     primaryBtnText="Login Now"
-    secondaryBtnText="SignUp Now">
+    secondaryBtnText="SignUp Now"
+    (submit)="submit()"
+    (navigate)="navigate()">
+
 
     <form [formGroup]="loginForm">
         <app-primary-input
@@ -9,7 +12,8 @@
             inputName="email"
             type="email"
             label="Email"
-            placeholder="exemple@gmail.com">
+            placeholder="exemple@gmail.com"
+        >
             <img src="/assets/svg/email-icon.svg"/>
         </app-primary-input>
         <app-primary-input
